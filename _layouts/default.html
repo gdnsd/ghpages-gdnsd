@@ -23,13 +23,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">gdnsd</a>
+          <a class="navbar-brand" href="/">gdnsd</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li{% if page.name == 'index' %} class="active"{% endif %}><a href="/">Overview</a></li>
+            <li{% if page.name == 'res' %} class="active"{% endif %}><a href="/res.html">Resources</a></li>
+            <li{% if page.name == 'license' %} class="active"{% endif %}><a href="/license.html">Licensing</a></li>
+            <li{% if page.name == 'history' %} class="active"{% endif %}><a href="/history.html">History</a></li>
           </ul>
         </div>
       </div>

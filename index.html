@@ -1,7 +1,10 @@
 ---
+name: index
 layout: default
 ---
 
-<div class="jumbotron">
-  <p>Blah blah - testing gh-pages jekyll + boostrap setup still...</p>
-</div>
+<p>gdnsd is an Authoritative-only DNS server. The initial g stands for Geographic; gdnsd offers a plugin system for geographic (or other sorts of) balancing, redirection, weighting, and service-state-conscious failover.</p>
+
+<p>gdnsd is written in C using libev and pthreads with a focus on high performance, low latency service. It does not offer any form of caching or recursive service, and notably does not support DNSSEC.  There's a strong focus on making the code efficient, lean, and resilient.  The code has a decent regression testsuite with full branch coverage on the core packet parsing and generation code, and some scripted QA tools for e.g. valgrind validation, clang-analyzer, etc.</p>
+
+<p>The geographically-aware features also support the emerging <a href="https://datatracker.ietf.org/doc/draft-vandergaast-edns-client-subnet/">EDNS Client Subnet draft</a> for receiving more-precise network location information from intermediate shared caches.</p>
