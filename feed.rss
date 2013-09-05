@@ -7,7 +7,7 @@ layout: none
 		<title>gdnsd</title>
 		<description>gdnsd news</description>
 		<link>http://gdnsd.org/</link>
-		<atom:link href="http://gdnsd.org/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://gdnsd.org/feed.rss" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 			<item>
 				<title>{{ post.title }}</title>

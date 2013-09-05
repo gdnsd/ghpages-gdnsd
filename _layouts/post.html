@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-xs-4">
     <div class="list-group">
-      <a class="list-group-item" href="/rss.xml"><img src="/feed-icon-14x14.png" alt="[rss]"> RSS Feed</a>
+      <a class="list-group-item" href="/feed.rss"><img src="/feed-icon-14x14.png" alt="[rss]"> RSS Feed</a>
       {% for post in site.posts %}
         <a href="{{ post.url }}" class="list-group-item{% if post.id == page.id %} active{% endif %}">
           {{ post.title }}
