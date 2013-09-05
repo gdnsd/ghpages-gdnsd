@@ -1,0 +1,27 @@
+---
+  menu_name: news
+---
+{% include header.html %}
+<div class="row">
+  <div class="col-xs-4">
+    <div class="list-group">
+      {% for post in site.posts %}
+        <a href="{{ post.url }}" class="list-group-item{% if post.id == page.id %} active{% endif %}">
+          {{ post.title }}
+          <span class="badge">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-xs-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>{{ page.title }}<span class="pull-right">{{ page.date | date: "%Y-%m-%d" }}</span></h4>
+      </div>
+      <div class="panel-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+{% include footer.html %}

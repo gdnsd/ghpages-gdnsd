@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- XXX <link rel="shortcut icon" href="../../assets/ico/favicon.png"> -->
+    <title>gdnsd</title>
+    <link href="/bs/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bs/css/navbar-fixed-top.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="bs/js/html5shiv.js"></script>
+      <script src="bs/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">gdnsd</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li{% if page.menu_name == 'index' %} class="active"{% endif %}><a href="/">Overview</a></li>
+            <li{% if page.menu_name == 'news' %} class="active"{% endif %}><a href="{{ site.posts[0].url }}">News</a></li>
+            <li{% if page.menu_name == 'getting' %} class="active"{% endif %}><a href="/getting.html">Getting</a></li>
+            <li{% if page.menu_name == 'res' %} class="active"{% endif %}><a href="/res.html">Resources</a></li>
+            <li{% if page.menu_name == 'users' %} class="active"{% endif %}><a href="/users.html">Users</a></li>
+            <li{% if page.menu_name == 'license' %} class="active"{% endif %}><a href="/license.html">Licensing</a></li>
+            <li{% if page.menu_name == 'history' %} class="active"{% endif %}><a href="/history.html">History</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
