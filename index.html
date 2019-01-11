@@ -3,7 +3,7 @@ menu_name: index
 layout: default
 ---
 
-<p class="lead"><strong>gdnsd</strong> is an Authoritative-only DNS server. The initial g stands for Geographic, as gdnsd offers a plugin system for geographic (or other sorts of) balancing, redirection, and service-state-conscious failover. The plugin system can also do things like weighted address/cname records.  If you don't care about these features you can ignore them :)</p>
+<p class="lead"><strong>gdnsd</strong> is an Authoritative-only DNS server. The initial g stands for Geographic, as gdnsd offers a plugin system for geographic (or other sorts of) balancing, redirection, and service-state-conscious failover.</p>
 
 <p>gdnsd is written in C, and uses pthreads with libev and liburcu to attain very high performance, low latency service. It does not offer any form of caching or recursive service, and does not support DNSSEC.  There's a strong focus on making the code efficient, lean, and resilient.  The code has a decent regression testsuite with full branch coverage on the core packet parsing and generation code, and some scripted QA tools for e.g. valgrind validation, clang-analyzer, etc.</p>
 
