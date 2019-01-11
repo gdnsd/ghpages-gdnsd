@@ -3,11 +3,11 @@ menu_name: index
 layout: default
 ---
 
-<p class="lead"><strong>gdnsd</strong> is an Authoritative-only DNS server which does geographic (or other sorts of) balancing, redirection, weighting, and service-state-conscious failover at the DNS layer.</p>
+<p class="lead"><strong>gdnsd</strong> is an Authoritative-only DNS server. The initial g stands for Geographic, as gdnsd offers a plugin system for geographic (or other sorts of) balancing, redirection, and service-state-conscious failover. The plugin system can also do things like weighted address/cname records.  If you don't care about these features you can ignore them :)</p>
 
-<p>gdnsd is written in C using libev and pthreads with a focus on high performance, low latency service. It does not offer any form of caching or recursive service, and notably does not support DNSSEC.  There's a strong focus on making the code efficient, lean, and resilient.  The code has a decent regression testsuite with full branch coverage on the core packet parsing and generation code, and some scripted QA tools for e.g. valgrind validation, clang-analyzer, etc.</p>
+<p>gdnsd is written in C, and uses pthreads with libev and liburcu to attain very high performance, low latency service. It does not offer any form of caching or recursive service, and does not support DNSSEC.  There's a strong focus on making the code efficient, lean, and resilient.  The code has a decent regression testsuite with full branch coverage on the core packet parsing and generation code, and some scripted QA tools for e.g. valgrind validation, clang-analyzer, etc.</p>
 
-<p>The geographically-aware features also support the emerging <a href="https://datatracker.ietf.org/doc/draft-vandergaast-edns-client-subnet/">EDNS Client Subnet draft</a> for receiving more-precise network location information from intermediate shared caches.</p>
+<p>The geographically-aware features also support the EDNS Client Subnet spec from <a href="https://tools.ietf.org/html/rfc7871">RFC 7871</a> for receiving more-precise network location information from intermediate shared caches.</p>
 
 <p>
 <a href='https://travis-ci.org/gdnsd/gdnsd'><img src='https://travis-ci.org/gdnsd/gdnsd.svg?branch=master' alt='Build Status' /></a>
